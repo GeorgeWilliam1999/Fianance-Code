@@ -23,7 +23,7 @@ def ImpliedVolatility(CP,S_0,K,sigma,tau,r):
     optPrice = lambda sigma: BS_Call_Option_Price(CP,S_0,K,sigma,tau,r)
     vega= lambda sigma: dV_dsigma(S_0,K,sigma,tau,r)
     
-    # While the difference between the model and the arket price is large
+    # While the difference between the model and the market price is large
     # follow the iteration
     n = 1.0 
     while error>10e-10:
